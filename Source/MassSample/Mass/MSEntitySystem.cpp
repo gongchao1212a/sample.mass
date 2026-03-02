@@ -50,6 +50,7 @@ void UMSEntitySystem::Deinitialize()
 
 void UMSEntitySystem::PostInitialize()
 {
+    Super::PostInitialize();
     auto* ReplicationSubsystem = UWorld::GetSubsystem<UMassReplicationSubsystem>(GetWorld());
     check(ReplicationSubsystem);
 
